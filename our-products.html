@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Palmera Dates</title>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Alpine JS -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/94dd3c1954.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>     
+        <div>
+            <nav class="absolute w-full bg-black bg-opacity-60 border-b border-gray-300" x-data="{ menu: false }">
+                <div class="max-w-7xl mx-auto px-8 py-2">
+                    <div class="flex items-center justify-between h-16">
+                        <div class="w-full justify-between flex items-center">
+                            <div class="flex flex-row justify-center">
+                                <a class="flex-shrink-0" href="index.html">
+                                    <img class="h-16" src="./images/logo.png" alt="Palmera Logo"/>
+                                </a>
+                            </div>
+                            <div class="hidden md:block">
+                                <div class="ml-10 flex justify-between items-baseline space-x-4">
+                                    <a class="menu-link" href="index.html">
+                                        Home
+                                    </a>
+                                    <a class="menu-link active-link" href="our-products.html">
+                                        Our Products
+                                    </a>
+                                    <a class="menu-link" href="/#">
+                                        Our Farms
+                                    </a>
+                                    <a class="menu-link" href="contact.html">
+                                        Contact Us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="ml-4 flex items-center md:ml-6">
+                            </div>
+                        </div>
+                        <div class="-mr-2 flex md:hidden">
+                            <button @click=" menu = !menu " class="text-white hover:text-orange-500 text-3xl inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+                                <i class="fas fa-bars" :class="{'hidden-imp': menu, 'block': !menu }"></i>
+                                <i class="fas fa-times" :class="{'hidden-imp': !menu, 'block': menu }"></i> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:hidden" x-show="menu"
+                    @click.away="menu = false"
+                    x-transition:enter="transition transform origin-top-right ease-out duration-200"
+                    x-transition:enter-start="opacity-0 scale-75"
+                    x-transition:enter-end="opacity-100 scale-100"
+                    x-transition:leave="transition transform origin-top-right ease-out duration-200"
+                    x-transition:leave-start="opacity-100 scale-100"
+                    x-transition:leave-end="opacity-0 scale-75">
+                    <div class="px-10 pt-2 pb-3 space-y-1">
+                        <a class="menu-link block font-medium" href="index.html">
+                            Home
+                        </a>
+                        <a class="menu-link active-link block font-medium" href="our-products.html">
+                            Our Products
+                        </a>
+                        <a class="menu-link block font-medium" href="/#">
+                            Our Forms
+                        </a>
+                        <a class="menu-link block font-medium" href="contact.html">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Top Banner Section -->
+    <div class="h-48 md:h-80" style="background: url(./images/dates-bg.jpg); background-position: center; background-size: cover;">
+        <div class="w-full h-full bg-black bg-opacity-70 flex flex-col items-center justify-center pt-10">
+            <h3 class="text-white font-medium text-center text-3xl md:text-5xl">
+                Our Products
+            </h3>
+        </div>
+    </div>
+    <!-- /Top Banner Section -->
+
+    <!-- Description Section -->
+    <div class="p-10 text-center max-w-5xl mx-auto">
+        Palmera works on a wide range of Medjool Dates products varieties inclusive of Premium Dates and different grades of dates as well as sizing the dates from Super Jumbo dates to Small.
+        <br>
+        We offer multiple packaging sizes to suite your needs and we work closely with merchants on developing unique white label products.
+    </div>
+    <!-- /Description Section -->
+
+    <!-- Products Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 max-w-5xl mx-auto pb-10">
+        <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+            <a href="#" class="w-full block h-full">
+                <img alt="blog photo" src="./images/10.jpg" class="max-h-40 w-full object-cover"/>
+                <div class="bg-white w-full p-4">
+                    <p class="text-gray-900 text-xl font-medium mb-2">
+                        Premium Dates
+                    </p>
+                    <p class="text-gray-500 font-light text-base">
+                        0-10% Skin Seperation
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+            <a href="#" class="w-full block h-full">
+                <img alt="blog photo" src="./images/10.jpg" class="max-h-40 w-full object-cover"/>
+                <div class="bg-white w-full p-4">
+                    <p class="text-gray-900 text-xl font-medium mb-2">
+                        Premium Dates
+                    </p>
+                    <p class="text-gray-500 font-light text-base">
+                        0-10% Skin Seperation
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+            <a href="#" class="w-full block h-full">
+                <img alt="blog photo" src="./images/10.jpg" class="max-h-40 w-full object-cover"/>
+                <div class="bg-white w-full p-4">
+                    <p class="text-gray-900 text-xl font-medium mb-2">
+                        Premium Dates
+                    </p>
+                    <p class="text-gray-500 font-light text-base">
+                        0-10% Skin Seperation
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+            <a href="#" class="w-full block h-full">
+                <img alt="blog photo" src="./images/10.jpg" class="max-h-40 w-full object-cover"/>
+                <div class="bg-white w-full p-4">
+                    <p class="text-gray-900 text-xl font-medium mb-2">
+                        Premium Dates
+                    </p>
+                    <p class="text-gray-500 font-light text-base">
+                        0-10% Skin Seperation
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+            <a href="#" class="w-full block h-full">
+                <img alt="blog photo" src="./images/10.jpg" class="max-h-40 w-full object-cover"/>
+                <div class="bg-white w-full p-4">
+                    <p class="text-gray-900 text-xl font-medium mb-2">
+                        Premium Dates
+                    </p>
+                    <p class="text-gray-500 font-light text-base">
+                        0-10% Skin Seperation
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+            <a href="#" class="w-full block h-full">
+                <img alt="blog photo" src="./images/10.jpg" class="max-h-40 w-full object-cover"/>
+                <div class="bg-white w-full p-4">
+                    <p class="text-gray-900 text-xl font-medium mb-2">
+                        Premium Dates
+                    </p>
+                    <p class="text-gray-500 font-light text-base">
+                        0-10% Skin Seperation
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- /Products Section -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="w-full bg-black py-5 md:py-10">
+            <div class="flex flex-wrap overflow-hidden max-w-6xl mx-auto px-5">
+
+                <div class="w-full overflow-hidden md:my-1 md:px-1 md:w-1/3 lg:my-3 lg:px-3 lg:w-1/3 xl:my-3 xl:px-3 xl:w-1/3">
+                    <!-- Column Content -->
+                    <h4 class="text-white text-xl font-bold mb-3">Get In Touch</h4>
+                    <p class=" text-white font-bold">
+                        <i class="fas fa-map-marker-alt text-orange-500 mr-1"></i> Head Office:
+                    </p>
+                    <p class="text-white">
+                        12 Khair Al Deen Al Maani St, Dabouq, Amman
+                    </p>
+                    <p class=" text-white font-bold">
+                        <i class="fas fa-phone-alt text-orange-500 mr-1"></i> Phone:
+                    </p>
+                    <a href="#" class="text-white hover:text-orange-500">
+                        00962 (6) 5335558
+                    </a>
+                </div>
+              
+                <div class="w-full overflow-hidden md:my-1 md:px-1 md:w-1/3 lg:my-3 lg:px-3 lg:w-1/3 xl:my-3 xl:px-3 xl:w-1/3">
+                    <!-- Column Content -->
+                    <h4 class="text-white text-xl font-bold mb-3 mt-5 md:mt-0">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="text-gray-300 hover:text-orange-500 group">
+                            <i class="fab fa-facebook-f border-gray-300 group-hover:border-orange-500 border h-8 w-8 py-2 text-center rounded-full mx-2"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-orange-500 group">
+                            <i class="fab fa-linkedin border-gray-300 group-hover:border-orange-500 border h-8 w-8 py-2 text-center rounded-full mx-2"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-orange-500 group">
+                            <i class="fab fa-instagram border-gray-300 group-hover:border-orange-500 border h-8 w-8 py-2 text-center rounded-full mx-2"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-orange-500 group">
+                            <i class="fab fa-youtube border-gray-300 group-hover:border-orange-500 border h-8 w-8 py-2 text-center rounded-full mx-2"></i>
+                        </a>
+                    </div>
+                </div>
+              
+                <div class="w-full overflow-hidden md:my-1 md:px-1 md:w-1/3 lg:my-3 lg:px-3 lg:w-1/3 xl:my-3 xl:px-3 xl:w-1/3">
+                    <!-- Column Content -->
+                    <h4 class="text-white text-xl font-bold mb-3 mt-5 md:mt-0">Get Our Newsletter</h4>
+                    <p class="text-white">
+                        We will be glad to let you know more
+                    </p>
+                    <form action="" class="text-center w-full mt-2">
+                        <input type="email" class="w-full bg-gray-100 bg-opacity-10 border-0 ring-0 outline-none text-white px-3 py-2">
+                        <input type="submit" class="btn-main">
+                    </form>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+</body>

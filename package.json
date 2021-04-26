@@ -1,0 +1,20 @@
+{
+  "name": "palmera",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.12",
+    "tailwindcss": "^2.1.1",
+    "vite": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwind build tailwind/tailwind.css -o css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
